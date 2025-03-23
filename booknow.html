@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Briony">
+  <title>White Chaco</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Embedded CSS */
+    header {
+      text-align: center;
+      background-color: #f4eadd;
+      padding: 1rem 0;
+    }
+    nav a:hover {
+        color: #4d2600;
+    }
+    footer {
+        background-color: #f2e6d9;
+        text-align: center;
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+  </style>
+</head>
+
+<body>     
+    <header class="hero-header booknow-header">
+          <div class="overlay">
+          <h1><strong><em>White Chaco</em></strong></h1>
+          <h4>Asian fusion restaurant — all love  all heart </h4>
+          </div>
+    </header>
+
+    <nav>
+            <a href="main.html">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="setmenu.html">Set Menu</a>
+            <a href="booknow.html">Book Now</a>
+            <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="form-container">
+        <h2>Book Your Table</h2>
+        <form onsubmit="event.preventDefault(); alert('🎉 Booking submitted!')" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+          
+          <label>Time Slot:</label>
+          <table class="time-table" title="Booking Time Options">
+            <thead>
+              <tr>
+                <th>Time Slot</th>
+                <th>Select</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>6:00 – 7:30 PM</td>
+                <td><input type="radio" name="time" value="6-730" required></td>
+              </tr>
+              <tr>
+                <td>7:30 – 9:00 PM</td>
+                <td><input type="radio" name="time" value="730-9"></td>
+              </tr>
+            </tbody>
+          </table>
+      
+          <label for="guests">Number of Guests:</label>
+          <select id="guests" name="guests" required>
+            <option value="">-- Select --</option>
+            <option value="1-2">1–2</option>
+            <option value="3-4">3–4</option>
+            <option value="5+">5+</option>
+          </select>
+    
+          <label for="requests">Special Requests:</label>
+          <textarea id="requests" name="requests" rows="4" placeholder="Optional"></textarea>
+    
+          <button type="submit">Submit Booking</button>
+        </form> 
+      
+    </main>
+    
+
+    <footer>
+            <p>&copy; 2025 Whitechaco. All rights reserved.</p>
+    </footer>
+   
+
+</body>
+</html>
+
+
+  
